@@ -15,6 +15,21 @@ func PrintNbrBase(n int, base string) {
 		}
 	}
 
+	if n < 0 {
+		z01.PrintRune('-')
+		if n == -n {
+			baseLen := len(base)
+			quotient := -(n / baseLen)
+			remainder := -(n % baseLen)
+			if quotient != 0 {
+				PrintNbrBase(quotient, base)
+			}
+			z01.PrintRune(rune(base[remainder]))
+			return
+		}
+		n = -n
+	}
+
 	if n == 0 {
 		z01.PrintRune(rune(base[n]))
 	} else {
