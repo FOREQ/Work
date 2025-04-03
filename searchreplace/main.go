@@ -16,8 +16,8 @@ func main() {
 		return
 	}
 
-	for i := 0; i < len(sentence); i++ {
-		if sentence[i] == frune {
+	for i, r := range sentence {
+		if r == frune {
 			sentence[i] = srune
 		} else {
 			continue
@@ -28,3 +28,13 @@ func main() {
 		z01.PrintRune(s)
 	}
 }
+
+// func searchReplace()string {
+// 	args:= os.Args
+// 	word:= [1]args
+// 	a:= [2]args
+// 	b:= [3]args
+// 	for i:=0; i<len(word); i++ {
+// 		if string(word[])
+// 	}
+// }
