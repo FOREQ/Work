@@ -1,7 +1,12 @@
 package main
 
-import "piscine"
+import (
+	"fmt"
+
+	"piscine"
+)
 
 func main() {
-	piscine.PrintNbrBase(-104, "01")
+	args := [2]string{"DD", "DABC"}
+	fmt.Println(piscine.HiddeP(args[0], args[1]))
 }
